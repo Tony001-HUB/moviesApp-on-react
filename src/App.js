@@ -1,12 +1,18 @@
-import React from 'react';
-import Form from './components/form.js'
+import React,{Component} from 'react';
+import Header from './components/header/Header.js'
+import Footer from './components/footer/Footer.js'
+import Main from './components/main/Main.js'
 
-function App() {
-  return(
-    <div className='App'>
-      <Form/>
+export default class App extends Component {
+  
+  
+render() {
+  return (
+    <div>
+        <Header/>
+          <Main/>
+        <Footer/>
     </div>
-  )
+  );
 }
-
-export default App;
+}
