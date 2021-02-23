@@ -6,7 +6,8 @@ import './Main.css'
 
 export default class Main extends Component{  
     state = {
-        movies: []
+        movies: [],
+        loading: true
     }
 
     componentDidMount(){
@@ -14,21 +15,23 @@ export default class Main extends Component{
     }
 
     getMovie = async (search = 'matrix', type = 'movie') =>{
+        this.setState({loading: true})
         await fetch(`http://www.omdbapi.com/?apikey=3df642f9&s=${search}&type=${type !== "all" ? type : ''}`)
             .then(response => response.json())
             .then(data => this.setState({
-                movies: data.Search
+                movies: data.Search,
+                loading: false
             }))
     }
     
     render(){
-        const{movies} = this.state;
+        const{movies, loading} = this.state;
         return <main className='container content'>
             <Search getMovie={this.getMovie}/>
             {
-                movies.length ? (
-                    <Movies movies={this.state.movies}/>
-                ): <Preloader/>
+                loading ? (
+                 <Preloader/> 
+                ): <Movies movies={movies}/>
             }
             </main>
     }
