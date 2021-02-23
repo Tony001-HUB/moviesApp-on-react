@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+
 export default class Search extends Component{
 
     state = {
@@ -11,6 +12,12 @@ export default class Search extends Component{
             searchVal: event.target.value
         })
         console.log(this.state.searchVal);
+    }
+
+    onKeyDown = (event) => {
+        if(event.key === 'Enter'){
+            this.props.getMovie(this.state.searchVal)
+        }
     }
 
     render(){          
@@ -26,9 +33,16 @@ export default class Search extends Component{
                     className="validate"
                     value = {this.state.searchVal}
                     onChange = {this.handleOnChange}
-                    />
-                    <label></label>
-                    <span className="helper-text" data-error="wrong" data-success="right">Input movie name, for search</span>
+                    onKeyDown = {this.onKeyDown}
+                    ></input>
+                    <button 
+                    className="btn waves-effect waves-light" 
+                    type="submit" 
+                    name="action"
+                    onClick = {() => this.props.getMovie(this.state.searchVal)}
+                    >
+                    <i className="material-icons right">Search</i>
+                    </button>
                     </div>
                 </div>
             </div>

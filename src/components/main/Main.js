@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Movies from '../movies/movieList'
 import Preloader from '../preloader/Preloader'
+import Search from '../searchPanel/Search'
 import './Main.css'
 
 export default class Main extends Component{  
@@ -12,8 +13,8 @@ export default class Main extends Component{
         this.getMovie();
     }
 
-    getMovie = async () =>{
-        await fetch("http://www.omdbapi.com/?apikey=3df642f9&s=matrix")
+    getMovie = async (search = 'matrix') =>{
+        await fetch(`http://www.omdbapi.com/?apikey=3df642f9&s=${search}`)
             .then(response => response.json())
             .then(data => this.setState({
                 movies: data.Search
@@ -22,15 +23,14 @@ export default class Main extends Component{
     
     render(){
         const{movies} = this.state;
-        return(
-            <main className='container content'>
+        return <main className='container content'>
+            <Search getMovie={this.getMovie}/>
             {
                 movies.length ? (
                     <Movies movies={this.state.movies}/>
                 ): <Preloader/>
             }
             </main>
-        )
     }
     
 }
