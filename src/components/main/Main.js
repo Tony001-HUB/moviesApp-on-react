@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Movies from '../movies/movieList'
+import Preloader from '../preloader/Preloader'
 import './Main.css'
 
 export default class Main extends Component{  
@@ -20,10 +21,14 @@ export default class Main extends Component{
     }
     
     render(){
-        console.log(this.state.movies)
+        const{movies} = this.state;
         return(
             <main className='container content'>
-            <Movies movies={this.state.movies}/>
+            {
+                movies.length ? (
+                    <Movies movies={this.state.movies}/>
+                ): <Preloader/>
+            }
             </main>
         )
     }

@@ -7,7 +7,9 @@ function Movie(props) {
     return <div className="movie card"> 
             <div className="card">
                 <div className="card-image">
-                <img src={Poster} alt="error"/>
+                {
+                    (Poster === 'N/A') ? <img src="https://via.placeholder.com/468x670?text=Visit+Blogging.com+Now" alt="error"/> : <img src={Poster} alt="error"/>
+                }
                 <span className="card-title">{`${Title}: ${Year}`}</span>
                 </div>
                 <div className="card-content">
