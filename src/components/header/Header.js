@@ -4,7 +4,7 @@ import './Header.css'
 function Header() {
     return (
         <nav>
-            <div className="nav-wrapper">
+            <div className="nav-wrapper orange lighten-1">
                 <a href="http://localhost:3000/" className="brand-logo center">Movie</a>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
                     <li><a  href="https://github.com/Tony001-HUB">Github</a></li>
