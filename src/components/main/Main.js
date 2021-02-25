@@ -14,7 +14,7 @@ export default class Main extends Component{
         this.getMovie();
     }
 
-    getMovie = async (search = 'matrix', type = 'movie') =>{
+    getMovie = async (search = 'matrix', type = 'all') =>{
         this.setState({loading: true})
         await fetch(`https://www.omdbapi.com/?apikey=3df642f9&s=${search}&type=${type !== "all" ? type : ''}`)
             .then(response => response.json())
