@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/moviesApp-by-react/static/css/main.6dfcb393.chunk.css",
-    "main.js": "/moviesApp-by-react/static/js/main.ec57b903.chunk.js",
-    "main.js.map": "/moviesApp-by-react/static/js/main.ec57b903.chunk.js.map",
-    "runtime-main.js": "/moviesApp-by-react/static/js/runtime-main.f182988c.js",
-    "runtime-main.js.map": "/moviesApp-by-react/static/js/runtime-main.f182988c.js.map",
-    "static/js/2.a2d54b35.chunk.js": "/moviesApp-by-react/static/js/2.a2d54b35.chunk.js",
-    "static/js/2.a2d54b35.chunk.js.map": "/moviesApp-by-react/static/js/2.a2d54b35.chunk.js.map",
-    "index.html": "/moviesApp-by-react/index.html",
-    "static/css/main.6dfcb393.chunk.css.map": "/moviesApp-by-react/static/css/main.6dfcb393.chunk.css.map",
-    "static/js/2.a2d54b35.chunk.js.LICENSE.txt": "/moviesApp-by-react/static/js/2.a2d54b35.chunk.js.LICENSE.txt"
+    "main.css": "/moviesApp-on-react/static/css/main.6dfcb393.chunk.css",
+    "main.js": "/moviesApp-on-react/static/js/main.ec57b903.chunk.js",
+    "main.js.map": "/moviesApp-on-react/static/js/main.ec57b903.chunk.js.map",
+    "runtime-main.js": "/moviesApp-on-react/static/js/runtime-main.96f64dbe.js",
+    "runtime-main.js.map": "/moviesApp-on-react/static/js/runtime-main.96f64dbe.js.map",
+    "static/js/2.a2d54b35.chunk.js": "/moviesApp-on-react/static/js/2.a2d54b35.chunk.js",
+    "static/js/2.a2d54b35.chunk.js.map": "/moviesApp-on-react/static/js/2.a2d54b35.chunk.js.map",
+    "index.html": "/moviesApp-on-react/index.html",
+    "static/css/main.6dfcb393.chunk.css.map": "/moviesApp-on-react/static/css/main.6dfcb393.chunk.css.map",
+    "static/js/2.a2d54b35.chunk.js.LICENSE.txt": "/moviesApp-on-react/static/js/2.a2d54b35.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.f182988c.js",
+    "static/js/runtime-main.96f64dbe.js",
     "static/js/2.a2d54b35.chunk.js",
     "static/css/main.6dfcb393.chunk.css",
     "static/js/main.ec57b903.chunk.js"
